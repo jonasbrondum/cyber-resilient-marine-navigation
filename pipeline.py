@@ -26,7 +26,6 @@ def pipeline(data_path, set, fusion_mix):
     print("Loading and slicing data...")
     data_duration = 10000
     data_offset = 0
-    # Insert your data here:
     lidar_df, gps_df, imu_df, heading_df, enc_df = loadData(data_path, set, 
                                                             data_duration, data_offset)
     

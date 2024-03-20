@@ -15,14 +15,44 @@ The project consisted of several methods for calculating an odometry to use in l
 1. LiDAR odometry from point cloud registration. This is located in `lidar_odometry.py`.
 2. Template matching (TM) odometry using LiDAR with electronic navigational charts (ENC) or open-street map (OSM). This is located in `tm_odometry.py`.
 
-These odometries were along with GPS, Compass, and IMU measurements used in the error-state Kalman filter for continuous localization.
+These odometries were along with GPS, Compass, and IMU measurements used in the error-state Kalman filter for continuous localization. The error-state kalman filter is implemented as a class in `eskf.py`.
 
 ![Project pipeline](/imgs/full_pipeline.png "Project pipeline")
 
+The pipeline is combined in `pipeline.py`
 
 ## Dataset
 
+The pipeline as it is implemented here makes use of pickled DataFrames. The data used for the project is not for public use, so it is, unfortunately, unavailable for me to share. The `loadData()`in `data_samples.py` can easily be modified to fit other data storage.
+
+The dataset was partitioned into smaller sets for development such that the relative East-North-Up coordinate system could be utilized.
+
+The current structure accomodates 5 DataFrames: 
+### `lidar_df`
+
+| `timestamp` | `path` |
+| in Unix Epoch format | path to `.pcd`-files |
+
+### `gps_df`
+
+| `timestamp`| `latitude` | `longitude ` | `East` | `North` | `sog` | `cog` |
+| 
+
+### `imu_df`
+
+| `timestamp` | `q0` | `q1` | `q2` | `q3` | `ax` | `ay` | `az` | `gx` | `gy` | `gz` |
+
+### `heading_df`
+
+| `timestamp` | `heading uncorrected` | `heading vessel` |
+
+### `enc_df`
+
+| `timestamp` | `path` | `enc_max_range` | `latitude` | `longitude` | `pxwidth` |
+
 ## How-to
+
+*Note*: The parameters used for the different sections of the pipeline are mostly defined in the `parameters.py`class with the call of `loadParameters()`.
 
 ## Copyright
 
