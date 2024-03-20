@@ -9,7 +9,15 @@ This thesis addresses the challenge of enhancing the cyber-resilience of maritim
 
 The developed navigation system is tested using real-world data collected in Copen- hagen’s inner harbor. Despite the absence of GNSS measurements, the system pro- duces sufficiently accurate positioning. The resulting position estimate demonstrates the cyber-resilience of the proposed solution for GNSS-independent navigation.
 
-## Repo content
+## Contents
+
+The project consisted of several methods for calculating an odometry to use in localization.
+1. LiDAR odometry from point cloud registration
+2. Template matching (TM) odometry using LiDAR with electronic navigational charts (ENC) or open-street map (OSM)
+
+These odometries were along with regular data used in the error-state Kalman filter for continuous localization.
+
+![Project pipeline](/imgs/full_pipeline.png "Project pipeline")
 
 ## Dataset
 
