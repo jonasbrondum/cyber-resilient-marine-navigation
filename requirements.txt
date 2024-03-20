@@ -47,13 +47,16 @@ fiftyone==0.23.1
 fiftyone-brain==0.14.1
 fiftyone-db==0.4.0
 fiona==1.9.5
+Flask==3.0.0
 fonttools==4.43.1
 ftfy==6.1.1
 future==0.18.3
 g2o-python==0.0.12
+GDAL==3.8.0
 geopandas==0.14.1
 glob2==0.7
 graphql-core==3.2.3
+gtsam @ file:///Users/jonasbrondum/Master_project_local/cyber-resilient-multi-modal-sensor-fusion-for-autonomous-ship-navigation/gtsam/python
 h11==0.14.0
 h2==4.1.0
 hdbscan==0.8.33
@@ -101,6 +104,7 @@ natsort==8.4.0
 nbformat==5.7.0
 nest-asyncio==1.5.8
 networkx==3.2
+numpy==1.26.2
 numpy-quaternion==2022.4.3
 open3d==0.17.0
 opencv-python==4.8.1.78
@@ -185,6 +189,7 @@ universal-analytics-python3==1.1.1
 urllib3==2.0.7
 voxel51-eta==0.12.0
 wcwidth==0.2.8
+Werkzeug==3.0.1
 wrapt==1.15.0
 wsproto==1.2.0
 xmltodict==0.13.0

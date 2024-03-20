@@ -12,12 +12,13 @@ The developed navigation system is tested using real-world data collected in Cop
 ## Contents
 
 The project consisted of several methods for calculating an odometry to use in localization.
-1. LiDAR odometry from point cloud registration
-2. Template matching (TM) odometry using LiDAR with electronic navigational charts (ENC) or open-street map (OSM)
+1. LiDAR odometry from point cloud registration. This is located in `lidar_odometry.py`.
+2. Template matching (TM) odometry using LiDAR with electronic navigational charts (ENC) or open-street map (OSM). This is located in `tm_odometry.py`.
 
-These odometries were along with regular data used in the error-state Kalman filter for continuous localization.
+These odometries were along with GPS, Compass, and IMU measurements used in the error-state Kalman filter for continuous localization.
 
 ![Project pipeline](/imgs/full_pipeline.png "Project pipeline")
+
 
 ## Dataset
 
