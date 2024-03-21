@@ -30,30 +30,39 @@ The dataset was partitioned into smaller sets for development such that the rela
 The current structure accomodates 5 DataFrames: 
 ### `lidar_df`
 
-| `timestamp` | `path` |  
-| in Unix Epoch format | path to `.pcd`-files |
+| `timestamp`       | `path`               |
+|-------------------|----------------------|
+| Unix Epoch format | path to `.pcd`-files |
 
 ### `gps_df`
 
-| `timestamp`| `latitude` | `longitude ` | `East` | `North` | `sog` | `cog` |  
+| `timestamp`          | `latitude` | `longitude ` | `East` | `North` | `sog` | `cog` |
+|----------------------|---|---|---|---|---|---|
 | in Unix Epoch format | - | - | - | - | speed over ground | course over ground |
 
 ### `imu_df`
 
-| `timestamp` | `q0` | `q1` | `q2` | `q3` | `ax` | `ay` | `az` | `gx` | `gy` | `gz` |  
+| `timestamp` | `q0` | `q1` | `q2` | `q3` | `ax` | `ay` | `az` | `gx` | `gy` | `gz` | 
+|---|---|---|---|---|---|---|---|---|---|---|
 | in Unix Epoch format | quaternions | acceleration | angular velocities |
 
 ### `heading_df`
 
-| `timestamp` | `heading uncorrected` | `heading vessel` |  
+| `timestamp` | `heading uncorrected` | `heading vessel` | 
+|---|---|---|
 | in Unix Epoch format | - | - |
 
 ### `enc_df`
 
 | `timestamp` | `path` | `enc_max_range` | `latitude` | `longitude` | `pxwidth` |  
+|---|---|---|---|---|---|
 | in Unix Epoch format | path to enc-generated images | max range in meters | center of image | center of image | pixelwidth of the image |
 
 ## How-to
+
+Project requirements can be installed from `requirements.txt`. 
+
+`pipeline.py` is set up to run with the project parameters.
 
 *Note*: The parameters used for the different sections of the pipeline are mostly defined in the `parameters.py`class with the call of `loadParameters()`.
 
