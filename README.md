@@ -36,26 +36,26 @@ The current structure accomodates 5 DataFrames:
 
 ### `gps_df`
 
-| `timestamp`          | `latitude` | `longitude ` | `East` | `North` | `sog` | `cog` |
-|----------------------|---|---|---|---|---|---|
-| in Unix Epoch format | - | - | - | - | speed over ground | course over ground |
+| `timestamp`          | `latitude` | `longitude ` | `East` | `North` | `sog`             | `cog`              |
+|----------------------|------------|--------------|--------|---------|-------------------|--------------------|
+| in Unix Epoch format | -          | -            | -      | -       | speed over ground | course over ground |
 
 ### `imu_df`
 
-| `timestamp` | `q0` | `q1` | `q2` | `q3` | `ax` | `ay` | `az` | `gx` | `gy` | `gz` | 
-|---|---|---|---|---|---|---|---|---|---|---|
-| in Unix Epoch format | quaternions | acceleration | angular velocities |
+| `timestamp`          | `q0`        | `q1` | `q2` | `q3` | `ax`         | `ay` | `az` | `gx`               | `gy` | `gz` |
+|----------------------|-------------|------|------|------|--------------|------|------|--------------------|------|------|
+| in Unix Epoch format | quaternions | -    | -    | -    | acceleration | -    | -    | angular velocities | -    | -    |
 
 ### `heading_df`
 
-| `timestamp` | `heading uncorrected` | `heading vessel` | 
-|---|---|---|
-| in Unix Epoch format | - | - |
+| `timestamp`          | `heading uncorrected` | `heading vessel` |
+|----------------------|-----------------------|------------------|
+| in Unix Epoch format | -                     | -                |
 
 ### `enc_df`
 
-| `timestamp` | `path` | `enc_max_range` | `latitude` | `longitude` | `pxwidth` |  
-|---|---|---|---|---|---|
+| `timestamp`          | `path`                       | `enc_max_range`     | `latitude`      | `longitude`     | `pxwidth`               |
+|----------------------|------------------------------|---------------------|-----------------|-----------------|-------------------------|
 | in Unix Epoch format | path to enc-generated images | max range in meters | center of image | center of image | pixelwidth of the image |
 
 ## How-to
